@@ -1,153 +1,340 @@
-# 📘 Day 02 — Operators
+# 🚀 Day 02 — Operators
 
-> **Level:** 🟢 Beginner | **Estimated Time:** 1–2 hours
-
----
-
-## 🎯 What You'll Learn
-
-- Arithmetic, assignment, comparison, and logical operators
-- The difference between `==` (loose) and `===` (strict) equality
-- Nullish coalescing `??` and optional chaining `?.`
-- The ternary operator for compact conditionals
-- Operator precedence and short-circuit evaluation
+### 📚 30 Days of JavaScript: Beginner to Advanced
 
 ---
 
-## 📖 Concepts Covered
+## 🧮 1. Arithmetic Operators
 
-### 1. Arithmetic Operators
+Used to perform **mathematical operations**:
 
 ```js
-10 + 3   // 13 — addition
-10 - 3   // 7  — subtraction
-10 * 3   // 30 — multiplication
-10 / 3   // 3.333... — division
-10 % 3   // 1  — modulus (remainder)
-10 ** 3  // 1000 — exponentiation
-x++      // post-increment (use then add 1)
-++x      // pre-increment (add 1 then use)
+let a = 10;
+let b = 3;
+
+console.log(a + b);  // 13  ➕ Addition
+console.log(a - b);  // 7   ➖ Subtraction
+console.log(a * b);  // 30  ✖️ Multiplication
+console.log(a / b);  // 3.33 ➗ Division
+console.log(a % b);  // 1   🧩 Modulus (remainder)
+console.log(a ** b); // 1000 ⚡ Exponentiation
 ```
 
 ---
 
-### 2. Assignment Operators
+### 🔼 Increment & 🔽 Decrement
 
 ```js
-x += 5   // x = x + 5
-x -= 3   // x = x - 3
-x *= 2   // x = x * 2
-x /= 4   // x = x / 4
-x %= 3   // x = x % 3
-x **= 2  // x = x ** 2
-x ??= 10 // assign only if x is null/undefined (ES2021)
+let x = 5;
+
+console.log(x++); // 5  (Post-increment)
+console.log(x);   // 6
+
+console.log(++x); // 7  (Pre-increment)
+console.log(x--); // 7  (Post-decrement)
+console.log(x);   // 6
+
+console.log(--x); // 5  (Pre-decrement)
 ```
 
 ---
 
-### 3. Comparison Operators
+## 📝 2. Assignment Operators
 
 ```js
-5 == "5"    // true  — loose (ignores type) ⚠️
-5 === "5"   // false — strict (checks type) ✅
-5 != "5"    // false — loose inequality
-5 !== "5"   // true  — strict inequality ✅
-10 > 5      // true
-10 >= 10    // true
-```
+let num = 10;
 
-> 🔑 **Always prefer `===` over `==`** to avoid unexpected type coercion bugs.
+num += 5;   // 15
+num -= 3;   // 12
+num *= 2;   // 24
+num /= 4;   // 6
+num %= 4;   // 2
+num **= 3;  // 8
 
----
-
-### 4. Logical Operators
-
-```js
-true && false  // false — AND (both must be true)
-true || false  // true  — OR  (at least one must be true)
-!true          // false — NOT (flips the value)
-```
-
-**Short-circuit evaluation:**
-```js
-user && user.name   // safe: only accesses .name if user is truthy
-name || "Guest"     // fallback: uses "Guest" if name is falsy
+console.log(num);
 ```
 
 ---
 
-### 5. Nullish Coalescing (`??`)
-
-Only falls back if the left side is `null` or `undefined` (not for `0`, `""`, `false`):
+### ⚡ Logical Assignment (ES2021)
 
 ```js
-null ?? "default"      // "default"
-undefined ?? "default" // "default"
-0 ?? "default"         // 0      ← different from ||
-"" ?? "default"        // ""     ← different from ||
-false ?? "default"     // false  ← different from ||
+let count = null;
+count ??= 10;  // Assign if null/undefined
+console.log(count); // 10
+
+let score = 5;
+score ||= 100; // Assign if falsy
+console.log(score); // 5
+
+let flag = true;
+flag &&= false; // Assign if truthy
+console.log(flag); // false
 ```
 
 ---
 
-### 6. Optional Chaining (`?.`)
+## ⚖️ 3. Comparison Operators
 
-Safely access nested properties without `TypeError`:
+Always return **true or false**:
 
 ```js
-const user = { profile: null };
+console.log(5 == "5");   // true  ⚠️ loose equality
+console.log(5 === "5");  // false ✅ strict equality
 
-user.profile.avatar      // ❌ TypeError: Cannot read property of null
-user?.profile?.avatar    // ✅ undefined (no crash)
-user?.getName?.()        // ✅ undefined if getName doesn't exist
+console.log(5 != "5");   // false
+console.log(5 !== "5");  // true
+
+console.log(10 > 5);   // true
+console.log(10 < 5);   // false
+console.log(10 >= 10); // true
+console.log(10 <= 9);  // false
 ```
 
 ---
 
-### 7. Ternary Operator
+### ⚠️ Important Tip
+
+Always prefer **`===` over `==`** to avoid unexpected results:
 
 ```js
-condition ? valueIfTrue : valueIfFalse
+console.log(0 == false);   // true  ❌ confusing
+console.log(0 === false);  // false ✅ correct
 
-const age = 20;
-const status = age >= 18 ? "adult" : "minor"; // "adult"
+console.log("" == false);  // true  ❌
+console.log("" === false); // false ✅
+
+console.log(null == undefined);  // true ⚠️ special case
+console.log(null === undefined); // false
 ```
 
 ---
 
-### 8. Operator Precedence
+## 🔗 4. Logical Operators
 
-Higher precedence runs first (like in math):
+### ✅ AND (`&&`)
+
 ```js
-2 + 3 * 4    // 14 — * runs before +
-(2 + 3) * 4  // 20 — parentheses override
+console.log(true && true);   // true
+console.log(true && false);  // false
+```
+
+### 🔀 OR (`||`)
+
+```js
+console.log(true || false);  // true
+console.log(false || false); // false
+```
+
+### ❗ NOT (`!`)
+
+```js
+console.log(!true);  // false
+console.log(!false); // true
 ```
 
 ---
 
-## 💡 Key Takeaways
+### ⚡ Short-Circuiting
 
-- Always use `===` / `!==` instead of `==` / `!=`
-- Use `??` for null/undefined fallbacks; use `||` for falsy fallbacks
-- `?.` prevents crashes when accessing nested properties
-- Short-circuit evaluation: `&&` stops at first falsy, `||` stops at first truthy
+```js
+let user = null;
+let username = user && user.name;
+
+console.log(username); // null
+
+let displayName = username || "Guest";
+console.log(displayName); // "Guest"
+```
+
+---
+
+### 💡 Default Values Example
+
+```js
+function greet(name) {
+  name = name || "stranger";
+  console.log("Hello, " + name + "!");
+}
+
+greet("Alice");
+greet();
+greet("");
+```
+
+---
+
+## 🧠 5. Nullish Coalescing (`??`)
+
+```js
+let val1 = null ?? "default";
+let val2 = undefined ?? "default";
+let val3 = 0 ?? "default";
+let val4 = "" ?? "default";
+let val5 = false ?? "default";
+
+console.log(val1, val2, val3, val4, val5);
+```
+
+---
+
+### 🔍 Difference: `||` vs `??`
+
+```js
+0 || "default";  // "default" ❌
+0 ?? "default";  // 0 ✅
+```
+
+---
+
+## 🔀 6. Ternary Operator (`? :`)
+
+```js
+let age = 20;
+
+let status = age >= 18 ? "adult" : "minor";
+console.log(status); // "adult"
+```
+
+---
+
+### 🎯 Chained Example
+
+```js
+let score2 = 75;
+
+let grade = score2 >= 90 ? "A"
+          : score2 >= 80 ? "B"
+          : score2 >= 70 ? "C"
+          : score2 >= 60 ? "D"
+          : "F";
+
+console.log(grade); // "C"
+```
+
+---
+
+## 🔗 7. Optional Chaining (`?.`)
+
+Safely access nested properties:
+
+```js
+let userObj = {
+  name: "Alice",
+  address: {
+    city: "Wonderland"
+  }
+};
+
+console.log(userObj?.address?.city); // "Wonderland"
+console.log(userObj?.phone?.number); // undefined
+console.log(userObj?.getName?.());   // undefined
+```
+
+---
+
+## 🧬 8. Bitwise Operators (Quick Look)
+
+```js
+console.log(5 & 3);   // 1
+console.log(5 | 3);   // 7
+console.log(5 ^ 3);   // 6
+console.log(~5);      // -6
+console.log(5 << 1);  // 10
+console.log(5 >> 1);  // 2
+```
+
+---
+
+## 📊 9. Operator Precedence
+
+```js
+let result = 2 + 3 * 4;    // 14
+let result2 = (2 + 3) * 4; // 20
+```
+
+👉 Multiplication runs before addition (like math)
 
 ---
 
 ## 📝 Exercises
 
-Open `index.js` and complete the exercises at the bottom.
+### 🧪 Exercise 1
 
-1. What is `17 % 5`? Use modulus to check if a number is even or odd
-2. Predict: `"5" + 5`, `"5" - 5`, `true + true + true`
-3. Write a ternary that classifies a number as positive, negative, or zero
-4. Explain the difference between `null ?? "fallback"` and `null || "fallback"`
-5. Safely access `data.user.profile.avatar` using optional chaining
+What is:
+
+```js
+17 % 5
+```
+
+👉 Use it to check **even/odd numbers**
 
 ---
 
+### 🧪 Exercise 2
 
+Predict output:
 
-## ⏭️ Next Up
+```js
+console.log(5 + "5");
+console.log(5 - "5");
+console.log(true + true + true);
+```
 
-**[Day 03 — Strings →](../Day-03-Strings/)**
+---
+
+### 🧪 Exercise 3
+
+Use ternary to check:
+
+* Positive
+* Negative
+* Zero
+
+---
+
+### 🧪 Exercise 4
+
+Difference between:
+
+```js
+null ?? "fallback"
+null || "fallback"
+0 ?? "fallback"
+0 || "fallback"
+```
+
+---
+
+### 🧪 Exercise 5
+
+```js
+let data = { user: { profile: null } };
+
+// Safely access avatar
+data.user?.profile?.avatar;
+```
+
+---
+
+## ⭐ Support
+
+If you found this helpful:
+
+👉 **Give this repo a ⭐ on GitHub**
+👉 Share it with others 🚀
+👉 Keep learning & building 💻
+
+---
+
+## 🎉 Day 02 Complete!
+
+You're now comfortable with:
+
+* Arithmetic & Assignment
+* Comparison & Logical Operators
+* Ternary & Optional Chaining
+* Operator Precedence
+
+👉 Next up: **Control Flow (if/else, switch, loops)** 🔥
+
