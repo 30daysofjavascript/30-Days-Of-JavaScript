@@ -8,8 +8,8 @@
 ## 📚 Course Roadmap
 
 ### 🟢 Beginner (Days 1–6)
-- Day 01 — Variables & Data Types  
-- Day 02 — Operators  
+- Day 01 — [Variables & Data Types](https://github.com/30daysofjavascript/30-Days-Of-JavaScript/tree/main/Day-01-Variables-DataTypes)  
+- Day 02 — [Operators](https://github.com/30daysofjavascript/30-Days-Of-JavaScript/tree/main/Day-02-Operators)  
 - Day 03 — Strings & Methods  
 - Day 04 — Arrays  
 - Day 05 — Objects  
