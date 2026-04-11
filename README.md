@@ -426,14 +426,7 @@ db.users.find()
 
 - https://jsfiddle.net  
 - https://codepen.io  
-- https://replit.com  
-
----
-
-### 🔁 5. Live Server
-
-- Install **Live Server**  
-- Right-click `index.html` → Open with Live Server  
+- https://replit.com   
 
 ---
 
@@ -445,6 +438,13 @@ db.users.find()
 - ❤️ Consistency  
 
 ---
+
+---
+
+### 🔁 VS Code extension Live Server
+
+- Install **Live Server**  
+- Right-click `index.html` → Open with Live Server 
 
 ## 🎯 By the End You Will
 
