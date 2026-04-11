@@ -84,7 +84,7 @@ This guide covers **all major ways to run JavaScript**, from beginner-friendly m
 
 ---
 
-## 🌐 1. Run JavaScript in Google Chrome (Most Important)
+## 🌐 1. How to run JavaScript?
 
 ### ✅ Method 1: Developer Console (Easiest)
 
