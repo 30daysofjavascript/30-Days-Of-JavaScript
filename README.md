@@ -5,51 +5,40 @@
 
 ---
 
-## 📚 Course Roadmap
+## 📚 Course Structure
 
-### 🟢 Beginner (Days 1–6)
-- Day 01 — [Variables & Data Types](https://github.com/30daysofjavascript/30-Days-Of-JavaScript/tree/main/Day-01-Variables-DataTypes)  
-- Day 02 — [Operators](https://github.com/30daysofjavascript/30-Days-Of-JavaScript/tree/main/Day-02-Operators)  
-- Day 03 — Strings & Methods  
-- Day 04 — Arrays  
-- Day 05 — Objects  
-- Day 06 — Functions  
-
----
-
-### 🟡 Intermediate (Days 7–15)
-- Day 07 — Scope & Hoisting  
-- Day 08 — Arrow Functions  
-- Day 09 — Array Methods  
-- Day 10 — Destructuring  
-- Day 11 — Spread & Rest  
-- Day 12 — DOM Basics  
-- Day 13 — DOM Events  
-- Day 14 — Forms & Validation  
-- Day 15 — ES6 Classes  
-
----
-
-### 🟠 Advanced (Days 16–23)
-- Day 16 — Prototypes & Inheritance  
-- Day 17 — Promises  
-- Day 18 — Async / Await  
-- Day 19 — Fetch API  
-- Day 20 — Error Handling  
-- Day 21 — Modules  
-- Day 22 — LocalStorage  
-- Day 23 — Regex  
-
----
-
-### 🔴 Expert (Days 24–30)
-- Day 24 — Closures  
-- Day 25 — Higher-Order Functions  
-- Day 26 — Iterators & Generators  
-- Day 27 — Map & Set  
-- Day 28 — WeakMap & WeakSet  
-- Day 29 — Design Patterns  
-- Day 30 — 🚀 Final Project  
+| Day | Topic | Level |
+|-----|-------|-------|
+| [Day 01](./Day-01-Variables-DataTypes/) | Variables & Data Types | 🟢 Beginner |
+| [Day 02](./Day-02-Operators/) | Operators | 🟢 Beginner |
+| [Day 03](./Day-03-Strings/) | Strings & String Methods | 🟢 Beginner |
+| [Day 04](./Day-04-Arrays/) | Arrays | 🟢 Beginner |
+| [Day 05](./Day-05-Objects/) | Objects | 🟢 Beginner |
+| [Day 06](./Day-06-Functions/) | Functions | 🟢 Beginner |
+| [Day 07](./Day-07-Scope-Hoisting/) | Scope & Hoisting | 🟡 Intermediate |
+| [Day 08](./Day-08-Arrow-Functions/) | Arrow Functions | 🟡 Intermediate |
+| [Day 09](./Day-09-Array-Methods/) | Array Methods | 🟡 Intermediate |
+| [Day 10](./Day-10-Destructuring/) | Destructuring | 🟡 Intermediate |
+| [Day 11](./Day-11-Spread-Rest/) | Spread & Rest Operators | 🟡 Intermediate |
+| [Day 12](./Day-12-DOM-Basics/) | DOM Manipulation Basics | 🟡 Intermediate |
+| [Day 13](./Day-13-DOM-Events/) | DOM Events | 🟡 Intermediate |
+| [Day 14](./Day-14-Forms-Validation/) | Forms & Validation | 🟡 Intermediate |
+| [Day 15](./Day-15-ES6-Classes/) | ES6 Classes | 🟡 Intermediate |
+| [Day 16](./Day-16-Prototypes-Inheritance/) | Prototypes & Inheritance | 🟠 Advanced |
+| [Day 17](./Day-17-Promises/) | Promises | 🟠 Advanced |
+| [Day 18](./Day-18-AsyncAwait/) | Async / Await | 🟠 Advanced |
+| [Day 19](./Day-19-Fetch-API/) | Fetch API & HTTP | 🟠 Advanced |
+| [Day 20](./Day-20-Error-Handling/) | Error Handling | 🟠 Advanced |
+| [Day 21](./Day-21-Modules/) | ES Modules | 🟠 Advanced |
+| [Day 22](./Day-22-LocalStorage/) | LocalStorage & SessionStorage | 🟠 Advanced |
+| [Day 23](./Day-23-Regex/) | Regular Expressions | 🟠 Advanced |
+| [Day 24](./Day-24-Closures/) | Closures | 🔴 Expert |
+| [Day 25](./Day-25-Higher-Order-Functions/) | Higher-Order Functions | 🔴 Expert |
+| [Day 26](./Day-26-Iterators-Generators/) | Iterators & Generators | 🔴 Expert |
+| [Day 27](./Day-27-Map-Set/) | Map & Set | 🔴 Expert |
+| [Day 28](./Day-28-WeakMap-WeakSet/) | WeakMap & WeakSet | 🔴 Expert |
+| [Day 29](./Day-29-Design-Patterns/) | Design Patterns | 🔴 Expert |
+| [Day 30](./Day-30-Final-Project/) | Final Project — Full App | 🔴 Expert |
 
 ---
 
@@ -468,6 +457,7 @@ If this helps you:
 
 ## 👨‍💻 Author
 
-Built with ❤️ for developers  
+Built with ❤️ for the developer community.  
+Feel free to star ⭐ this repo if it helps you!
 
 ---
